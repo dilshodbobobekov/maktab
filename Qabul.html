@@ -87,18 +87,27 @@
         const familiya = document.getElementById("inp2")
         const yosh = document.getElementById("inp3")
         const btn1 = document.getElementById("btn")
-        btn1.addEventListener("click", ()=>{
-            if(ism.value == ""){
-                alert("Ism maydoni bosh")
-            }
-            if(familiya.value == ""){
-                alert("Familiya maydoni bosh")
-            }
-            if(yosh.value == ""){
-                alert("Yosh maydoni bosh")
-            }
-            alert("Tabriklaymiz siz royxatdan o'tdingiz")
-        })
+        btn1.addEventListener("click", () => {
+
+    if (ism.value == "" || familiya.value == "" || yosh.value == "") {
+
+        if (ism.value == "") {
+            alert("Ism maydoni bo'sh");
+        }
+
+        if (familiya.value == "") {
+            alert("Familiya maydoni bo'sh");
+        }
+
+        if (yosh.value == "") {
+            alert("Yosh maydoni bo'sh");
+        }
+
+        return;
+    }
+
+    alert("Siz ro'yxatdan o'tdingiz");
+});
     </script>
 </body>
 </html>
