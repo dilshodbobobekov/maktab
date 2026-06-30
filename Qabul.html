@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+        }
+        .rasm{
+            width: 1340px;
+            height: 625px;
+        }
+        .ota{
+            width: 1340px;
+            height: 625px;
+            display: flex;
+            background-image: url(https://www.gazeta.uz/media/img/2018/11/vWwzGl15432279228843_l.jpg);
+            background-size: 1340px 625px;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .bola1{
+            width: 350px;
+            height: 350px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: cadetblue;
+            flex-direction: column;
+            border-radius: 15px;
+        }
+        #inp1{
+            width: 200px;
+            height: 30px;
+            border-radius: 10px;
+            margin: 0px 0px 15px 0px;
+            transition: 0.5s;
+        }
+        #inp1:hover{
+            box-shadow: 0px 0px 15px blue ;
+        }
+        #inp2{
+            width: 200px;
+            height: 30px;
+            border-radius: 10px;
+            margin: 0px 0px 15px 0px;
+            transition: 0.5s;
+        }
+        #inp2:hover{
+            box-shadow: 0px 0px 15px blue ;
+        }
+        #inp3{
+            width: 200px;
+            height: 30px;
+            border-radius: 10px;
+            transition: 0.5s;
+        }
+        #inp3:hover{
+            box-shadow: 0px 0px 15px blue ;
+        }
+        #btn{
+            width: 100px;
+            height: 30px;
+            margin: 10px 0px 0px 0px;
+            transition: 0.5s;
+        }
+        #btn:hover{
+            box-shadow: 0px 0px 15px rgb(13, 224, 13) ;
+            background-color: rgb(13, 224, 13);
+        }
+    </style>
+</head>
+<body>
+    <div class="ota">
+        <div class="bola1">
+        <input id="inp1" type="text" placeholder="Ism">
+        <input id="inp2" type="text" placeholder="Familiya">
+        <input id="inp3" type="text" placeholder="Yoshi">
+        <button id="btn" onclick="login()">Login</button>
+        </div>
+    </div>
+    <script>
+        const ism = document.getElementById("inp1")
+        const familiya = document.getElementById("inp2")
+        const yosh = document.getElementById("inp3")
+        const btn1 = document.getElementById("btn")
+        btn1.addEventListener("click", () => {
+
+    if (ism.value == "" || familiya.value == "" || yosh.value == "") {
+
+        if (ism.value == "") {
+            alert("Ism maydoni bo'sh");
+        }
+
+        if (familiya.value == "") {
+            alert("Familiya maydoni bo'sh");
+        }
+
+        if (yosh.value == "") {
+            alert("Yosh maydoni bo'sh");
+        }
+
+        return;
+    }
+
+    alert("Siz ro'yxatdan o'tdingiz");
+});
+    </script>
+</body>
+</html>
